@@ -1,9 +1,15 @@
-import { createApp } from 'vue';
-import App from './App.vue';
-import router from './router'; // 导入配置好的路由
+// main.js（或 main.ts）
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
 
-const app = createApp(App);
+// 关键：引入 Ant Design Vue 3
+import Antd from 'ant-design-vue'
+import 'ant-design-vue/dist/reset.css'
 
-app.use(router); // 注册路由
+const app = createApp(App)
 
-app.mount('#app');
+app.use(router)
+app.use(Antd)   // 全局注册所有组件
+
+app.mount('#app')

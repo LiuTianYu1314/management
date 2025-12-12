@@ -3,10 +3,16 @@ package magic.management.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.io.Serial;
+import java.io.Serializable;
+
 @Entity
 @Table(name = "student")
 @Data
-public class Student { // 类名改为 Student
+public class Student implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

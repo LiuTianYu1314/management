@@ -2,12 +2,12 @@ package magic.management;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 
 @SpringBootApplication
+@EnableCaching  // 确保这个注解存在
 public class ManagementApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(ManagementApplication.class, args);
     }
-
 }

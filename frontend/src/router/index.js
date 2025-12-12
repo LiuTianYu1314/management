@@ -3,25 +3,31 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 import HomeView from '../views/HomeView.vue';
 import DashboardLayout from '../components/DashboardLayout.vue';
-import BasicLineChart from '../views/charts/BasicLineChart.vue';
+import Users from '../views/charts/Users.vue'
+import Student from "../views/charts/Student.vue";
 
 const routes = [
     {
         path: '/',
-        // 使用 DashboardLayout 作为顶级路由组件
         component: DashboardLayout,
         children: [
             {
-                path: '', // 默认子路由，对应 /
+                path: '',
                 name: 'Home',
                 component: HomeView,
             },
             // 左侧导航栏点击后的新页面路由
             {
-                path: 'basic-line-chart', // 对应点击 "折线图" -> "基础折线图"
-                name: 'BasicLineChart',
-                component: BasicLineChart,
-                meta: { title: '基础折线图' }
+                path: 'users',
+                name: 'Users',
+                component: Users,
+                meta: { title: '学生信息' }
+            },
+            {
+                path: 'student',
+                name: 'Student',
+                component: Student,
+                meta: { title: '学生成绩' }
             },
             // ... 其他图表组件的路由
         ]
