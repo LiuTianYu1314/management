@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 import HomeView from '../views/HomeView.vue';
 import DashboardLayout from '../components/DashboardLayout.vue';
-import BasicLineChart from '../views/charts/BasicLineChart.vue';
+import BasicLineChart from '../views/charts/Users.vue';
 
 const routes = [
     {

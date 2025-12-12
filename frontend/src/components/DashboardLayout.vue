@@ -9,7 +9,7 @@
         </router-link>
 
         <router-link :to="{ name: 'BasicLineChart' }" class="menu-item" exact-active-class="active">
-          📈 折线图
+          🧑🏻‍🎓学生信息
         </router-link>
       </nav>
     </aside>
